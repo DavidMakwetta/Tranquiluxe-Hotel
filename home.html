@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tranquiluxe</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/home.css">
+    <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
+</head>
+<body>
+    <nav class="navbar">
+        <img src="./assets/images/logo.png" width="32" alt="">
+        <ul class="nav-links">
+            <li class="nav-link active"><a href="./home.html">Home</a></li>
+            <li class="nav-link"><a href="./rooms.html">Rooms</a></li>
+            <li class="nav-link"><a href="./contactus.html">Contact Us</a></li>
+            
+        </ul>
+        <button class="cta" onclick="return navigateToRooms()">Book Now</button>
+    </nav>
+
+    <main class="wrapper">
+        <section class="hero">
+            <img src="./assets/images/logo.png" width="72" alt="" srcset="">
+            <h3 class="underline">Tranquiluxe Hotel</h3><br><br><br>
+           <i><h1>A HOME AWAY <br>
+                  FROM HOME</h1></i>
+
+        </section>
+
+        <section class="rooms">
+            <ul class="rooms-preview" id="roomsList">
+            </ul>
+            <div class="cta-rooms">
+                <p>We welcome you to Tranquiluxe Hotel Kampala, our service crafts an authentic and memorable experience. Being a Luxury Boutique Hotel with uniquely designed suites that provide warm and genuine hospitality, we always ensure we can offer you the best experiences.</p>
+                <button class="cta" onclick="return navigateToRooms()">View More</button>
+            </div>
+        </section>
+
+        <div class="trusted-onboard">
+            <section class="onboard">
+                <h1>OUR BRAND</h1>
+                <p>We strive to create a home away from home for each of our guests. Let us show you the warmth of Uganda’s Hospitality.</p>
+                <div class="cta-btns">
+                    <button style="background-color: #1e1eb2;color: white;" onclick="return navigateToRooms()">Book Now</button>
+                    <button class="contactus-btn" onclick="return navigateToContactUs()">Contact Us</button>
+                </div>
+            </section> 
+
+            <section class="trusted">
+                <h1>Trusted By</h1>
+                <ul class="trusted-banners">
+                    <li class="banner"><img src="./assets/images/airbnb.png" alt="" width="52" height="52"><span>AirBNB</span></li>
+                    <li class="banner"><img src="./assets/images/burj.png" alt="" width="52" height="52"><span>Burj Khalifa</span></li>
+                    <li class="banner"><img src="./assets/images/empire.png" alt="" width="52" height="52"><span>Empire Hotel</span></li>
+                </ul>
+            </section>
+           
+        </div>
+
+        <section class="blur">
+            <div class="carousel">
+                <div class="meta">
+                    <h1 id="metaDetail">Premium interiors for you</h1>
+                    
+                </div>
+                <div>
+                    <ul class="carousel-items">
+                        <li class="carousel-item prev" id="prevImage"></li>
+                        <li class="carousel-item current" id="currentImage"></li>
+                        <li class="carousel-item next" id="nextImage"></li>
+                    </ul>
+                    <div class="interactive">
+                        <button type="button" onclick="prevImage()">
+                            <img src="./assets/images/back.png" height="24" alt="" srcset="">
+                        </button>
+                        <button type="button" onclick="nextImage()">
+                            <img src="./assets/images/next.png" height="24" alt="" srcset="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <ul class="feature-items">
+                <li class="feature">
+                    <div class="feature-card">
+                        <img src="./assets/images/double-bed.png" alt="" height="56px" srcset="">
+                        <h2>ACCOMODATION</h2>
+                        <p>Tranquiluxe Hotel is a treat to an exicting new address in a serene environment .We offer our guests a delightful alternative to traditional accommodaion with stylish and airy rooms</p>
+                    </div>
+                </li>
+                <li class="feature">
+                    <div class="feature-card">
+                        <img src="./assets/images/chest-of-drawers.png" alt="" height="56px" srcset="">
+                        <h2>WEDDINGS & OCCASIONS</h2>
+                        <p>Enquire about our honeymoon suite when planning your big day at the Tranquiluxe Hotel</p>
+                    </div>
+                </li>
+                <li class="feature">
+                    <div class="feature-card">
+                        <img src="./assets/images/furniture.png" alt="" height="56px" srcset="">
+                        <h2>MEETINGS & EVENTS</h2>
+                        <p>Our venues feature modern technology ,high ceilings and are accompanied by pre-function areas</p>
+                    </div>
+                </li>
+                <li class="feature">
+                    <div class="feature-card">
+                        <img src="./assets/images/food.png" alt="" height="56px" srcset="">
+                        <h2>RESTUARANT</h2>
+                        <p>Tantalize your tastebuds with our scrumptious breakfast, comforting soups, salads, pastas, pizzas, Asian stir fries and curries.</p>
+                    </div>
+                </li>
+                <li class="feature">
+                    <div class="feature-card">
+                        <img src="./assets/images/l.png" alt="" height="56px" width="70px ">
+                        <h2>FITNESS CENTER</h2>
+                        <p>Stay in shape with state-of-the-art Life Fitness equipment during your stay at our hotel.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="about-us">
+            <div class="about-us-detail">
+                <p style="font-style: italic; font-size:x-large;color:brown;">We strive to create a home away from home for each of our guests. Let us show you the warmth of Uganda’s Hospitality”</p>
+               
+            </div>
+        </section>
+
+
+    </main>
+    <footer>
+        <div class="meta">
+            <img src="./assets/images/logo.png" width="32" alt="">
+            <h1 class="banner">Tranquiluxe</h1>
+           <i> <p>A HOME AWAY FROM HOME</p></i>
+        </div>
+        <ul class="footer-nav">
+            <li class="footer-link active"><a href="./home.html">Home</a></li>
+            <li class="footer-link"><a href="./rooms.html">Rooms</a></li>
+            <li class="footer-link"><a href="./contactus.html">Contact Us</a></li>
+            
+        </ul>
+        <ul class="footer-nav">
+            <li class="footer-link-head">Services</li>
+            <li class="footer-link"><a href="#">Rooms</a></li>
+            <li class="footer-link"><a href="#">Leisure</a></li>
+            <li class="footer-link"><a href="#">Restuarant</a></li>
+        </ul>
+        <ul class="footer-nav">
+            <li class="footer-link-head">Locations</li>
+            <li class="footer-link"><a href="#">Muyenga</a></li>
+            <li class="footer-link"><a href="#">Naguru</a></li>
+            <li class="footer-link"><a href="#">Kibuli</a></li>
+            <li class="footer-link"><a href="#">Gayaza</a></li>
+        </ul>
+        <ul class="footer-nav">
+            <li class="footer-link-head">Contact Us</li>
+            <li class="footer-link"><a href="mailto:example@example.com">tranquiluxe@gmail.com</a></li>
+            <li class="footer-link"><a href="#">0789182412</a></li>
+        </ul>
+    </footer>
+    <script src="./assets/js/home.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script>
+        const roomsList = rooms.slice(0, 2).map(room => `
+            <li class="room" onclick="return navigateTo('./detail.html?id=${room.id}')">
+                <img src="${room.image}" alt="${room.name}">
+                <span style="font-weight: bolder">${room.name}</span>
+                <span class="ellipses my">${room.description}</span>
+                <span>${room.metadata.cost}</span>
+            </li>
+        `);
+
+
+        document.getElementById("roomsList").innerHTML = roomsList.join('');
+    </script>
+    <script>
+        let carouselImages = [
+            { image: "./assets/carousel/hotel-1.jpg", title: "Clean Interior" },
+            { image: "./assets/carousel/hotel-2.jpg", title: "Luxury VIP lounges" },
+            { image: "./assets/carousel/hotel-3.jpg", title: "Beautiful Outdoors" },
+            { image: "./assets/carousel/hotel-4.jpg", title: "Party Areas" },
+            { image: "./assets/carousel/hotel-5.jpg", title: "24/7 support" },
+            { image: "./assets/carousel/hotel-6.jpg", title: "Neat furniture" },
+        ];
+        let index = 0;
+
+        update()
+
+        function nextIndex() {
+            if (index === (carouselImages.length - 1)) {
+                return 0;
+            } else {
+                return index + 1;
+            }
+        }
+
+        function prevIndex() {
+            if (index === 0) {
+                return carouselImages.length - 1;
+            } else {
+                return index - 1;
+            }
+        }
+
+        function nextImage() {
+            if (index === (carouselImages.length - 1)) {
+                index = 0;
+            } else {
+                index = index + 1;
+            }
+            update()
+        }
+
+        function prevImage() {
+            if (index === 0) {
+                index = carouselImages.length - 1;
+            } else {
+                index = index - 1;
+            }
+            update()
+        }
+
+        function update() {
+            document.querySelector(".blur").style.backgroundImage = "url('" + carouselImages[index].image + "')";
+            document.getElementById("currentImage").style.backgroundImage = "url('" + carouselImages[index].image + "')";
+            document.getElementById("metaDetail").innerHTML = carouselImages[index].title;
+            document.getElementById("nextImage").style.backgroundImage = "url('" + carouselImages[nextIndex()].image + "')";
+            document.getElementById("prevImage").style.backgroundImage = "url('" + carouselImages[prevIndex()].image + "')";
+        }
+
+        setInterval(() => { return nextImage() }, 5000)
+    </script>
+</body>
+</html>

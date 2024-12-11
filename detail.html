@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tranquiluxe</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/detail.css">
+    <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
+</head>
+<body>
+    <nav class="navbar">
+        <img src="./assets/images/logo.png" width="32" alt="">
+        <ul class="nav-links">
+            <li class="nav-link"><a href="./home.html">Home</a></li>
+            <li class="nav-link"><a href="./rooms.html">Rooms</a></li>
+            <li class="nav-link"><a href="./contactus.html">Contact Us</a></li>
+            
+        </ul>
+        <button class="cta" onclick="return navigateToContactUs()">Book Now</button>
+    </nav>
+
+
+    <main class="wrapper">
+        <section class="blur" id="roomBlur">
+            <div class="hero">
+                <img id="roomImage" src="" alt="">
+                
+               
+            </div>
+        </section>
+
+        <section class="room-details">
+
+            <div class="detail">
+                <h1 id="roomTitle"></h1>
+                <p id="roomDetail"></p>
+            </div>            
+            <div class="room-detail">
+                <table></table>
+                <button class="cta" onclick="return navigateToContactUs()" type="button">Book Now</button>
+            </div>
+
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="meta">
+            <img src="./assets/images/logo.png" width="32" alt="">
+            <h1 class="banner">Tranquiluxe</h1>
+            <i><p>A HOME AWAY FROM HOME</p></i>
+        </div>
+        <ul class="footer-nav">
+            <li class="footer-link"><a href="./home.html">Home</a></li>
+            <li class="footer-link"><a href="./rooms.html">Rooms</a></li>
+            <li class="footer-link"><a href="./contactus.html">Contact Us</a></li>
+            
+        </ul>
+        <ul class="footer-nav">
+            <li class="footer-link-head">Services</li>
+            <li class="footer-link"><a href="#">Rooms</a></li>
+            <li class="footer-link"><a href="#">Leisure</a></li>
+            <li class="footer-link"><a href="#">Restuarant</a></li>
+
+        </ul>
+        <ul class="footer-nav">
+            <li class="footer-link-head">Locations</li>
+            <li class="footer-link"><a href="#">Muyenga</a></li>
+            <li class="footer-link"><a href="#">Naguru</a></li>
+            <li class="footer-link"><a href="#">Kibuli</a></li>
+            <li class="footer-link"><a href="#">Gayaza</a></li>
+        </ul>
+        <ul class="footer-nav">
+            <li class="footer-link-head">Contact Us</li>
+            <li class="footer-link"><a href="mailto:example@example.com">tranquiluxe@gmail.com</a></li>
+            <li class="footer-link"><a href="#">0789182412</a></li>
+        </ul>
+    </footer>
+    <script src="./assets/js/main.js"></script>
+    <script>
+        var rooms = rooms;
+        var room = filterRoomId(getIdFromUrl());
+
+        document.getElementById("roomImage").src = room.image;
+        document.getElementById("roomBlur").style.backgroundImage = "url('" + room.image + "')";
+
+        document.getElementById("roomTitle").innerText =  room.name;
+        document.getElementById("roomDetail").innerText = room.description;
+
+        var table = document.querySelector("table");
+        var metadata = room.metadata;
+
+        for (const key in metadata) {
+            if (metadata.hasOwnProperty(key)) {
+                const row = document.createElement("tr");
+                const keyCell = document.createElement("td");
+                const valueCell = document.createElement("td");
+
+                keyCell.textContent = key.charAt(0).toUpperCase() + key.slice(1);
+                valueCell.textContent = metadata[key];
+
+                row.appendChild(keyCell);
+                row.appendChild(valueCell);
+                table.appendChild(row);
+            }
+        }
+    </script>
+</body>
+</html>

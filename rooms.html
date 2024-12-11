@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tranquiluxe</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/rooms.css">
+    <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
+</head>
+<body>
+    <nav class="navbar">
+        <img src="./assets/images/logo.png" width="32" alt="">
+        <ul class="nav-links">
+            <li class="nav-link"><a href="./home.html">Home</a></li>
+            <li class="nav-link active"><a href="./rooms.html">Rooms</a></li>
+            <li class="nav-link"><a href="./contactus.html">Contact Us</a></li>
+           
+        </ul><a href="./contactus.html"> <button class="cta">Book Now</button></a></li>
+       
+    </nav>
+
+
+    <main class="wrapper">
+        <div class="query-box">
+            <form class="searchbar" action="" method="get">
+                <input placeholder="what is on your mind..." type="text" name="search" id="" autocomplete="off">
+                <img src="./assets/images/search.png" height="24" alt="search" onclick="return this.parentNode.submit()">
+            </form>
+        </div>
+        <div class="rooms" id="rooms">
+            <ul class="rooms-list" id="roomsList">
+            </ul>
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="meta">
+            <img src="./assets/images/logo.png" width="32" alt="">
+            <h1 class="banner">Tranquiluxe</h1>
+            <i><p>A HOME AWAY FROM HOME</p></i>
+        </div>
+        <ul class="footer-nav">
+            <li class="footer-link" ><a href="./home.html">Home</a></li>
+            <li class="footer-link active"><a href="./rooms.html">Rooms</a></li>
+            <li class="footer-link" ><a href="./contactus.html">Contact Us</a></li>
+            
+        </ul>
+        <ul class="footer-nav">
+            <li class="footer-link-head">Services</li>
+            <li class="footer-link"><a href="#">Rooms</a></li>
+            <li class="footer-link"><a href="#">Leisure</a></li>
+            <li class="footer-link"><a href="#">Restuarant</a></li>
+        </ul>
+        <ul class="footer-nav">
+            <li class="footer-link-head">Locations</li>
+            <li class="footer-link"><a href="#">Muyenga</a></li>
+            <li class="footer-link"><a href="#">Naguru</a></li>
+            <li class="footer-link"><a href="#">Kibuli</a></li>
+            <li class="footer-link"><a href="#">Gayaza</a></li>
+        </ul>
+        <ul class="footer-nav">
+            <li class="footer-link-head">Contact Us</li>
+            <li class="footer-link"><a href="mailto:example@example.com">tranquiluxe@gmail.com</a></li>
+            <li class="footer-link"><a href="#">0789182412</a></li>
+        </ul>
+    </footer>
+    <script src="./assets/js/main.js"></script>
+    <script>
+        const roomsList = rooms.map(room => `
+            <li class="room" onclick="return navigateTo('./detail.html?id=${room.id}')">
+                <img src="${room.image}" alt="${room.name}">
+                <span style="font-weight: bolder">${room.name}</span>
+                <span class="ellipses my">${room.description}</span>
+                <span>${room.metadata.cost}</span>
+            </li>
+        `);
+
+        document.getElementById("roomsList").innerHTML = roomsList.join('');
+    </script>
+</body>
+</html>
